@@ -138,8 +138,8 @@ function startCounter() {
             minute = 0
             hour++
         }
-        
-        let format = (hour < 10? "0" + hour: hour) + ":" + (minute < 10? "0" + minute: minute) + ":" + (second < 10? "0" + second: second)
+
+        let format = (hour < 10 ? "0" + hour : hour) + ":" + (minute < 10 ? "0" + minute : minute) + ":" + (second < 10 ? "0" + second : second)
         counter.innerText = format
     }, 1000)
 }
@@ -147,6 +147,10 @@ function startCounter() {
 //Cria cronometragens
 function createResults() {
     let resultsContainer = document.getElementById('resultsContainer')
+    let numberOfResults = resultsContainer.children.length
+    if (numberOfResults > 2) {
+        resultsContainer.removeChild(resultsContainer.children[0])
+    }
 
     let divResults = document.createElement('divResults')
     divResults.id = 'divResults'
