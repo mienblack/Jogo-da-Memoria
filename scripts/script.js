@@ -4,10 +4,23 @@ const BACK = "card_back"
 const CARD = "card"
 const ICON = "icon"
 
+let vez = 0
+
+//Variáveis para o tempo
+let hour = 0
+let minute = 0
+let second = 0
+
+let checkTime = ''
+
+let cron = null
+
 //Inicia o jogo
 function startGame() {
     let startGameLayer = document.getElementById('game-start')
     startGameLayer.style.display = 'none'
+
+    startCounter()
 
     game.createCardsFromTechs();
     initializeCards(game.cards);
@@ -69,6 +82,12 @@ function flipCard() {
             if (game.checkMatch()) {
                 game.clearCards()
                 if (game.checkGameOver()) {
+                    //Mostra resultados
+                    vez++
+                    checkTime = counter.innerText
+                    createResults()
+                    clearInterval(cron)
+
                     let gameOverLayer = document.getElementById('game-over')
                     gameOverLayer.style.display = 'flex'
                 }
@@ -88,9 +107,54 @@ function flipCard() {
     }
 }
 
+//Recomeçar jogo
 function restartGame() {
+    //Reiniciar contador
+    clearInterval(cron)
+    hour = 0
+    minute = 0
+    second = 0
+
+    counter.innerText = "00:00:00"
+
     game.clearCards()
     startGame()
     let gameOverLayer = document.getElementById('game-over')
     gameOverLayer.style.display = 'none'
+}
+
+//Iniciar contador
+function startCounter() {
+
+    let counter = document.getElementById("counter")
+
+    cron = setInterval(() => {
+        second++
+        if (second == 60) {
+            second = 0
+            minute++
+        }
+        if (minute == 60) {
+            minute = 0
+            hour++
+        }
+        
+        let format = (hour < 10? "0" + hour: hour) + ":" + (minute < 10? "0" + minute: minute) + ":" + (second < 10? "0" + second: second)
+        counter.innerText = format
+    }, 1000)
+}
+
+//Cria cronometragens
+function createResults() {
+    let resultsContainer = document.getElementById('resultsContainer')
+
+    let divResults = document.createElement('divResults')
+    divResults.id = 'divResults'
+    let result = document.createElement('h1')
+    result.innerText = checkTime
+    result.classList = 'result'
+
+    divResults.appendChild(result)
+    resultsContainer.appendChild(divResults)
+
 }
