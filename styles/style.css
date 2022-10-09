@@ -16,15 +16,21 @@ body {
 }
 
 #gameBoard {
+    height: 90%;
     max-width: 700px;
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
 
+.icon {
+    width: 80%;
+    height: 80%;
+}
+
 .card {
     width: 125px;
-    height: 125px;
+    max-height: 125px;
     position: relative;
 
     transform-style: preserve-3d;
@@ -93,7 +99,7 @@ body {
 
 #timer {
     position: absolute;
-    top: 0;
+    top: 2.5%;
     right: 0;
     background-color: black;
     padding: 20px;

@@ -1,0 +1,113 @@
+@media screen and (max-width: 1030px) {
+
+    body {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #gameBoard {
+        height: 70%;
+        max-width: 580px;
+    }
+
+    .card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card_back {
+        font-size: 1.5rem;
+    }
+
+    #game-over {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    #timer {
+        position: relative;
+        align-self: flex-end;
+        margin: 0 20px 0 0;
+    }
+
+    #counter,
+    .result {
+        font-size: 0.8rem;
+    }
+
+    #resultsContainer {
+        position: relative;
+        flex-direction: row;
+        align-self: flex-start;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #gameBoard {
+        height: 50%;
+        max-width: 350px;
+    }
+
+    .card {
+        height: 71px;
+        width: 71px;
+    }
+}
+
+@media screen and (max-height: 670px) {
+    body {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #gameBoard {
+        height: 65%;
+    }
+
+    .card {
+        width: 68px;
+        height: 68px;
+    }
+}
+
+@media screen and (max-height: 670px) and (min-width: 1030px) {
+    body {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #gameBoard {
+        height: 65%;
+        max-width: 580px;
+    }
+
+    .card {
+        width: 68px;
+        height: 68px;
+    }
+
+    .card_back {
+        font-size: 1.5rem;
+    }
+
+    #timer {
+        position: relative;
+        align-self: flex-end;
+        margin: 0 20px 0 0;
+    }
+
+    #counter,
+    .result {
+        font-size: 0.8rem;
+    }
+
+    #resultsContainer {
+        position: relative;
+        flex-direction: row;
+        align-self: flex-start;
+        justify-content: space-between;
+    }
+}
