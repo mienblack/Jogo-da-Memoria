@@ -4,10 +4,10 @@ const BACK = "card_back"
 const CARD = "card"
 const ICON = "icon"
 
-startGame();
-
 //Inicia o jogo
 function startGame() {
+    let startGameLayer = document.getElementById('game-start')
+    startGameLayer.style.display = 'none'
 
     game.createCardsFromTechs();
     initializeCards(game.cards);
@@ -88,7 +88,7 @@ function flipCard() {
     }
 }
 
-function restart() {
+function restartGame() {
     game.clearCards()
     startGame()
     let gameOverLayer = document.getElementById('game-over')

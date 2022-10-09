@@ -59,7 +59,7 @@ body {
     transform: rotateY(0);
 }
 
-#game-over {
+#game-over, #game-start {
     top: 0;
     position: absolute;
     width: 100%;
@@ -67,14 +67,22 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
     font-size: 50px;
-    
+}
+
+#game-start {
+    text-align: center;
+    line-height: 100vh;
+}
+
+#game-over {
     display: none;
+        
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#restart {
+#restart, #start {
     padding: 20px;
     font-size: 20px;
     background-color: rgb(192, 175, 82);
