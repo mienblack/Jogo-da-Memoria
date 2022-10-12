@@ -28,10 +28,15 @@ body {
     height: 80%;
 }
 
+button {
+    cursor: pointer;
+}
+
 .card {
     width: 125px;
     max-height: 125px;
     position: relative;
+    cursor: pointer;
 
     transform-style: preserve-3d;
     transition: transform .5s;
