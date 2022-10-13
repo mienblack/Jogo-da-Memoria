@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+    cursor:default;
 }
 
 body {
@@ -36,7 +38,6 @@ button {
     width: 125px;
     max-height: 125px;
     position: relative;
-    cursor: pointer;
 
     transform-style: preserve-3d;
     transition: transform .5s;
