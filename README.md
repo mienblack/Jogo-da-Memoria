@@ -1,7 +1,7 @@
 <h1 align="center">Jogo da Memoria</h1>
 
 <p align="center">Jogo da memória de algumas tecnologias da programação.</p>
-<h3 align="center"><a src="https://mienblack.github.io/jogo-da-memoria/"><strong>[ JOGUE AGORA ]</strong></a></h3>
+<h3 align="center"><a href="https://mienblack.github.io/jogo-da-memoria/" target="_blank"><strong>[ JOGUE AGORA ]</strong></a></h3>
 
 ---
 
@@ -25,4 +25,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 Made with 💟 by Damien Costa ✌🏿
 
-[![LinkedIn Badge](https://img.shields.io/badge/-Damien_Costa-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/arthurpc03/)](https://www.linkedin.com/in/damien-costa-969953164/)
+<a href="https://www.linkedin.com/in/damien-costa-969953164/" target="_blank">![LinkedIn Badge](https://img.shields.io/badge/-Damien_Costa-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/damien-costa-969953164/)
