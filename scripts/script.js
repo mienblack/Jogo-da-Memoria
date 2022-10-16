@@ -60,17 +60,17 @@ function createCardFace(face, card, cardElement) {
     setTimeout(() => {
         let cardElementFace = document.createElement("div");
         cardElementFace.classList.add(face);
-    
+
         if (face === FRONT) {
             let iconElement = document.createElement("img");
             iconElement.classList.add(ICON);
             iconElement.src = "./images/" + card.icon + ".png";
             cardElementFace.appendChild(iconElement);
         } else {
-            cardElementFace.innerHTML = `<img class="brain" src="../images/backCard.png">`;
+            cardElementFace.innerHTML = `<img class="brain" src="../backCard.png">`;
         }
         cardElement.appendChild(cardElementFace)
-    },100)
+    }, 100)
 }
 
 //Vira a carta, verifica se ela continuará virada e se o jogo acabou
@@ -90,8 +90,10 @@ function flipCard() {
                     createResults()
                     clearInterval(cron)
 
-                    let gameOverLayer = document.getElementById('game-over')
-                    gameOverLayer.style.display = 'flex'
+                    setTimeout(() => {
+                        let gameOverLayer = document.getElementById('game-over')
+                        gameOverLayer.style.display = 'flex'
+                    }, 500)
                 }
             } else {
 
