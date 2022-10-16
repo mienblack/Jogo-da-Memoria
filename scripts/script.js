@@ -60,16 +60,19 @@ function createCardFace(face, card, cardElement) {
     setTimeout(() => {
         let cardElementFace = document.createElement("div");
         cardElementFace.classList.add(face);
+        img_backcard = `<img class="brain" src="../images/backCard.png">`;
 
+        setTimeout(() => {
         if (face === FRONT) {
             let iconElement = document.createElement("img");
             iconElement.classList.add(ICON);
             iconElement.src = "./images/" + card.icon + ".png";
             cardElementFace.appendChild(iconElement);
         } else {
-            cardElementFace.innerHTML = `<img class="brain" src="../images/goku.png">`;
+            cardElementFace.innerHTML = img_backcard
         }
         cardElement.appendChild(cardElementFace)
+        }, 100)
     }, 100)
 }
 
