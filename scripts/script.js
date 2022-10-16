@@ -66,7 +66,7 @@ function createCardFace(face, card, cardElement) {
         iconElement.src = "./images/" + card.icon + ".png";
         cardElementFace.appendChild(iconElement);
     } else {
-        cardElementFace.innerHTML = `<img class="brain" src="../images/backCard.png"`;
+        cardElementFace.innerHTML = `<img class="brain" src="../images/backCard.png">`;
     }
     cardElement.appendChild(cardElementFace)
 }
