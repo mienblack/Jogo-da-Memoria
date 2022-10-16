@@ -57,18 +57,20 @@ function createCardContent(card, cardElement) {
 
 //Cria frente e verso da carta
 function createCardFace(face, card, cardElement) {
-    let cardElementFace = document.createElement("div");
-    cardElementFace.classList.add(face);
-
-    if (face === FRONT) {
-        let iconElement = document.createElement("img");
-        iconElement.classList.add(ICON);
-        iconElement.src = "./images/" + card.icon + ".png";
-        cardElementFace.appendChild(iconElement);
-    } else {
-        cardElementFace.innerHTML = `<img class="brain" src="../images/backCard.png">`;
-    }
-    cardElement.appendChild(cardElementFace)
+    setTimeout(() => {
+        let cardElementFace = document.createElement("div");
+        cardElementFace.classList.add(face);
+    
+        if (face === FRONT) {
+            let iconElement = document.createElement("img");
+            iconElement.classList.add(ICON);
+            iconElement.src = "./images/" + card.icon + ".png";
+            cardElementFace.appendChild(iconElement);
+        } else {
+            cardElementFace.innerHTML = `<img class="brain" src="../images/backCard.png">`;
+        }
+        cardElement.appendChild(cardElementFace)
+    },100)
 }
 
 //Vira a carta, verifica se ela continuará virada e se o jogo acabou
