@@ -58,7 +58,7 @@ function createCardContent(card, cardElement) {
 
 //Monta a parte de trás
 function cardBack(cardElementFace) {
-    img_backcard = `<img class="brain" src="../images/backCard.png" alt="🇯🇵">`;
+    img_backcard = `<img class="brain" src="https://play-lh.googleusercontent.com/MxSC9b_LaOeh_4e-1e2Ilx5Vzk_v4zSwxdyxhp1y-H63VXCgB2V4emjV-IolhOoG3w-S" alt="🇯🇵">`;
     cardElementFace.innerHTML = img_backcard
 }
 
