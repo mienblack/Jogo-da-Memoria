@@ -53,17 +53,21 @@ function initializeCards(cards) {
 function createCardContent(card, cardElement) {
 
     createCardFace(FRONT, card, cardElement)
-    createCardFace(BACK, card, cardElement)
+    createCardFace(BACK, card, cardElement, cardBack)
 }
 
-
+//Monta a parte de trás
+function cardBack(cardElementFace) {
+    img_backcard = `<img class="brain" src="../images/backCard.png" alt="🇯🇵">`;
+    cardElementFace.innerHTML = img_backcard
+}
 
 //Cria frente e verso da carta
-function createCardFace(face, card, cardElement) {
+function createCardFace(face, card, cardElement, cardBack) {
     setTimeout(() => {
         let cardElementFace = document.createElement("div");
         cardElementFace.classList.add(face);
-        img_backcard = `<img class="brain" src="../images/backCard.png" alt="🇯🇵">`;
+        
 
         if (face === FRONT) {
             let iconElement = document.createElement("img");
@@ -71,7 +75,7 @@ function createCardFace(face, card, cardElement) {
             iconElement.src = "./images/" + card.icon + ".png";
             cardElementFace.appendChild(iconElement);
         } else {
-            cardElementFace.innerHTML = img_backcard
+            cardBack(cardElementFace)
         }
         cardElement.appendChild(cardElementFace)
     }, 100)
