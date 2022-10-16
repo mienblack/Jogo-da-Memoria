@@ -1,6 +1,7 @@
-<h1 align="center">Jogo da Memoria</h1>
+<h1 align="center">Jogo da Memória</h1>
 
-<p align="center">Jogo da memória de algumas tecnologias da programação.</p>
+<p align="center">Jogo da memória de alguns personagens de anime.</p><br>
+<p align="center">DIVIRTA-SE</p>
 <h3 align="center"><a href="https://mienblack.github.io/jogo-da-memoria/" target="_blank"><strong>[ JOGUE AGORA ]</strong></a></h3>
 
 ---
@@ -9,8 +10,8 @@
 
 
 <div align="center">
-  <img alt="memoryGame_start" title="Iniciar Jogo" src="./toReadme/inicio_jogo.gif" height="400px"/>
-  <img alt="memoryGame_over" title="Fim do jogo" src="./toReadme/fim_jogo.gif" height="400px"/>
+  <img alt="memoryGame_start" title="Iniciar Jogo" src="./toReadme/inicio.gif" height="400px"/>
+  <img alt="memoryGame_over" title="Fim do jogo" src="./toReadme/fim.gif" height="400px"/>
   <img alt="memoryGame_onMobile" title="Fim do jogo no Mobile" src="./toReadme/fim_mobile.gif" height="400px"/>
 
 </div>

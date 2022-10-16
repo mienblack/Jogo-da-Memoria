@@ -22,7 +22,7 @@ function startGame() {
 
     startCounter()
 
-    game.createCardsFromTechs();
+    game.createCardsFromCharacters();
     initializeCards(game.cards);
 }
 
@@ -66,7 +66,7 @@ function createCardFace(face, card, cardElement) {
         iconElement.src = "./images/" + card.icon + ".png";
         cardElementFace.appendChild(iconElement);
     } else {
-        cardElementFace.innerHTML = "&lt/&gt";
+        cardElementFace.innerHTML = `<img class="brain" src="../images/back_card.png">`;
     }
     cardElement.appendChild(cardElementFace)
 }

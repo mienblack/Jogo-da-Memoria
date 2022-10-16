@@ -11,6 +11,10 @@
         max-width: 580px;
     }
 
+    .brain {
+        width: 40px;
+    }
+
     .card {
         width: 100px;
         height: 100px;

@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #c7cdd3;
+    background-color: #F76767;
 }
 
 #gameBoard {
@@ -50,8 +50,8 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     backface-visibility: hidden;
 }
 
@@ -59,15 +59,17 @@ button {
     transform: rotateY(180deg);
 }
 
+.brain {
+    width: 70px;
+}
+
 .card_front {
     transform: rotateY(180deg);
-    background-color: #101c2c;
+    background-color: #080e15;
 }
 
 .card_back {
-    background-color: #05c3ff;
-    color: #101c2c;
-    font-size: 40px;
+    background-color: #EFB0B0;
     transform: rotateY(0);
 }
 
@@ -97,7 +99,8 @@ button {
 #restart, #start {
     padding: 20px;
     font-size: 20px;
-    background-color: rgb(192, 175, 82);
+    background-color: #e0a9a9;
+    font-weight: 700;
     border: none;
     border-radius: 10px;
     margin-top: 10px;
@@ -107,14 +110,14 @@ button {
     position: absolute;
     top: 2.5%;
     right: 0;
-    background-color: black;
+    background-color: #080e15;
     padding: 20px;
     border-radius: 20px;
     margin: 20px 20px 0 0;
 }
 
 #counter, .result{
-    color: white;
+    color: #E4BCBC  ;
 }
 
 #resultsContainer {
@@ -130,7 +133,7 @@ button {
     position: relative;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: #080e15;
     padding: 20px;
     border-radius: 20px;
     margin: 0 0 20px 20px;

@@ -1,19 +1,19 @@
 let game = {
 
-    lockmode: false, //Quando a secunda carta ta virada o tabuleiro fica bloqueado
+    lockmode: false, //Quando a segunda carta ta virada o tabuleiro fica bloqueado
     firstCard: null, //Valor para checar se é igual a segunda carta
     secondCard: null, //Valor para checar se é igual a primeira carta
 
-    techs: ['bootstrap',
-        'css',
-        'electron',
-        'firebase',
-        'html',
-        'javascript',
-        'jquery',
-        'mongo',
-        'node',
-        'react'
+    characters: ['edward',
+        'jotaro',
+        'goku',
+        'tanjiro',
+        'luffy',
+        'naruto',
+        'pikachu',
+        'saitama',
+        'shoyo',
+        'yugi'
     ],
 
     cards: null,
@@ -73,39 +73,39 @@ let game = {
     },
 
     //Cria cada uma das cartas do tabuleiro
-    createCardsFromTechs: function () {
+    createCardsFromCharacters: function () {
 
         this.cards = [];
 
         //Adiciona o par ao array de todas cartas
-        this.techs.forEach((tech) => {
-            this.cards.push(this.createPairFromTech(tech))
+        this.characters.forEach((char) => {
+            this.cards.push(this.createPairFromChar(char))
         })
         this.cards = this.cards.flatMap(pair => pair)
         this.shuffleCards()
     },
 
     //Cria um  array com  duas cartas (dois objetos) que formam par
-    createPairFromTech: function (tech) {
+    createPairFromChar: function (char) {
 
         return [
             {
-                id: this.createIdFromTech(tech),
-                icon: tech,
+                id: this.createIdFromChar(char),
+                icon: char,
                 flipped: false
             },
             {
-                id: this.createIdFromTech(tech),
-                icon: tech,
+                id: this.createIdFromChar(char),
+                icon: char,
                 flipped: false
             }
         ]
     },
 
     //Cria o id de cada carta
-    createIdFromTech: function (tech) {
+    createIdFromChar: function (char) {
 
-        return tech + parseInt(Math.random() * 1000)
+        return char + parseInt(Math.random() * 1000)
     },
 
     //Embaralha as cartas
