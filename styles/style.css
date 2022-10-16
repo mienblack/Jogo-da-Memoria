@@ -69,6 +69,8 @@ button {
 }
 
 .card_back {
+    text-align: center;
+    font-size: 4rem;
     background-color: #EFB0B0;
     transform: rotateY(0);
 }

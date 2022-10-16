@@ -15,6 +15,7 @@ let checkTime = ''
 
 let cron = null
 
+
 //Inicia o jogo
 function startGame() {
     let startGameLayer = document.getElementById('game-start')
@@ -55,14 +56,15 @@ function createCardContent(card, cardElement) {
     createCardFace(BACK, card, cardElement)
 }
 
+
+
 //Cria frente e verso da carta
 function createCardFace(face, card, cardElement) {
     setTimeout(() => {
         let cardElementFace = document.createElement("div");
         cardElementFace.classList.add(face);
-        img_backcard = `<img class="brain" src="../images/backCard.png">`;
+        img_backcard = `<img class="brain" src="../images/backCard.png" alt="🇯🇵">`;
 
-        setTimeout(() => {
         if (face === FRONT) {
             let iconElement = document.createElement("img");
             iconElement.classList.add(ICON);
@@ -72,7 +74,6 @@ function createCardFace(face, card, cardElement) {
             cardElementFace.innerHTML = img_backcard
         }
         cardElement.appendChild(cardElementFace)
-        }, 100)
     }, 100)
 }
 
