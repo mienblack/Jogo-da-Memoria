@@ -16,7 +16,12 @@
 
 </div>
 
-## Tecnologias
+## 💻 Projeto
+
+O jogo da memória utiliza utiliza DOM para a parte visual do jogo e orientação a objeto para a lógica por trás do jogo.
+O cronometro marca suas últimas três pontuações, utilizando apenas javascript.
+
+## 🚀 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
