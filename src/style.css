@@ -12,7 +12,6 @@ body {
     font-family: 'Righteous', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: #F76767;
 }
@@ -26,8 +25,8 @@ body {
 }
 
 .icon {
-    width: 80%;
-    height: 80%;
+    width: 87%;
+    height: 87%;
 }
 
 button {
@@ -60,7 +59,7 @@ button {
 }
 
 .brain {
-    width: 70px;
+    width: 85px;
 }
 
 .card_front {
@@ -156,7 +155,7 @@ button {
     }
 
     .brain {
-        width: 40px;
+        width: 65px;
     }
 
     .card {

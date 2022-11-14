@@ -1,7 +1,14 @@
+import CardElement from "./CardElement"
 
-export default function GameBoard() {
+export default function GameBoard(props) {
     return (
         <div id="gameBoard">
+            {props.cards.map((card, index) => {
+                return (
+                    <CardElement handleFlip={props.handleFlip} key={index} card={card} />
+                )
+            })}
+
         </div>
     )
 }

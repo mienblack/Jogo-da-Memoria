@@ -1,8 +1,8 @@
 
-export default function Timer() {
+export default function Timer(props) {
     return (
         <div id="timer">
-            <h1 id="counter">00:00:00</h1>
+            <h1 id="counter">{props.counter}</h1>
         </div>
     )
 }

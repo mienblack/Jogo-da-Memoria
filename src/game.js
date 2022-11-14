@@ -23,7 +23,6 @@ let game = {
     setCard: function (id) {
 
         let card = this.cards.filter(card => card.id === id)[0]
-        console.log(card)
 
         if (card.flipped || this.lockmode) {
             return false
@@ -39,35 +38,35 @@ let game = {
             this.lockmode = true
             return true
         }
-        
+
     },
 
     //Checar se as cartas formam par
-    checkMatch: function() {
+    checkMatch: function () {
         if (!this.firstCard || !this.secondCard) {
             return false
         }
-        if (this.firstCard.icon === this.secondCard.icon){
+        if (this.firstCard.icon === this.secondCard.icon) {
             return true
         }
     },
 
     //Resata valores para clicar na próxima carta
-    clearCards: function(){
+    clearCards: function () {
         this.firstCard = null
         this.secondCard = null
         this.lockmode = false
     },
 
     //Se as cartas não formam match, valores resetam
-    unflipCards: function() {
+    unflipCards: function () {
         this.firstCard.flipped = false
         this.secondCard.flipped = false
         this.clearCards()
     },
 
     //
-    checkGameOver: function() {
+    checkGameOver: function () {
 
         return this.cards.filter(card => !card.flipped).length == 0
     },
@@ -83,6 +82,7 @@ let game = {
         })
         this.cards = this.cards.flatMap(pair => pair)
         this.shuffleCards()
+        return this.cards
     },
 
     //Cria um  array com  duas cartas (dois objetos) que formam par
@@ -110,18 +110,40 @@ let game = {
 
     //Embaralha as cartas
     shuffleCards: function (cards) {
-    let currentIndex = this.cards.length;
-    let randomIndex = 0;
+        let currentIndex = this.cards.length;
+        let randomIndex = 0;
 
-    //Usa o indice da ultima carta para posicionar cartas restantes no array
-    while (currentIndex !== 0) {
+        //Usa o indice da ultima carta para posicionar cartas restantes no array
+        while (currentIndex !== 0) {
 
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        
-        currentIndex--;
-        [this.cards[randomIndex], this.cards[currentIndex]] = [this.cards[currentIndex], this.cards[randomIndex]]
+            randomIndex = Math.floor(Math.random() * currentIndex);
+
+            currentIndex--;
+            [this.cards[randomIndex], this.cards[currentIndex]] = [this.cards[currentIndex], this.cards[randomIndex]]
+        }
+    },
+
+    flipCard: function (cardId, gameOverCallback, noMatchCallback) {
+
+        if (this.setCard(cardId)) {
+            if (this.secondCard) {
+                if (this.checkMatch()) {
+                    this.clearCards()
+                    if (this.checkGameOver()) {
+                        setTimeout(() => {
+                            gameOverCallback
+                        }, 500)
+                    }
+                } else {
+                    setTimeout(() => {
+                        this.unflipCards()
+                        noMatchCallback
+                    }, 1000)
+
+                }
+            }
+        }
     }
-}
 
 }
 
